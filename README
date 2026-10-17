@@ -1,13 +1,45 @@
-backend
-TESTS USING JEST : 
-#npm jest
-TO BUILD THE IMAGE :
-#docker build -t basic_api .
-RUN IT :
-#docker run -d -p 3000:3000 --name basic_api basic_api
+# Project Setup and Execution
 
-frontend
-TO BUILD THE IMAGE :
-#docker build -t basic_api_frontend:latest -f client/Dockerfile .
-RUN IT :
-#docker run -d -p 8080:80 --name basic_api_frontend basic_api_frontend
+## Backend
+
+### 1. Run Tests
+
+Run the Jest test suite:
+
+```bash
+npm test
+```  
+
+### 2. Build Docker Image
+
+```bash
+docker build -t basic_api .
+```
+
+### 3. Run Docker Container
+
+```bash
+docker run -d -p 3000:3000 --name basic_api basic_api
+```
+
+The backend API will be available at:
+
+**http://localhost:3000**
+
+## Frontend
+
+### 1. Build Docker Image
+
+```bash
+docker build -t basic_api_frontend:latest -f client/Dockerfile .
+```
+
+### 2. Run Docker Container
+
+```bash
+docker run -d -p 8080:80 --name basic_api_frontend basic_api_frontend:latest
+```
+
+The frontend application will be available at:
+
+**http://localhost:8080**
