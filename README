@@ -1,0 +1,13 @@
+backend
+TESTS USING JEST : 
+#npm jest
+TO BUILD THE IMAGE :
+#docker build -t basic_api .
+RUN IT :
+#docker run -d -p 3000:3000 --name basic_api basic_api
+
+frontend
+TO BUILD THE IMAGE :
+#docker build -t basic_api_frontend:latest -f client/Dockerfile .
+RUN IT :
+#docker run -d -p 8080:80 --name basic_api_frontend basic_api_frontend

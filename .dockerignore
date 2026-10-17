@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+.git
+.gitignore
+.env
+coverage
+dist
+builddocker run -d -p 3000:3000 --name basic_api basic_api
