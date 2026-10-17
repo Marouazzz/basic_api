@@ -13,11 +13,14 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.send('Hello World\n');
 });
+// MODIFICATION ICI : On ne lance le serveur QUE si le fichier est exécuté directement, pas pendant les tests
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}/`);
+  });
+}
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}/`);
-});
-
+module.exports = app;
 
 // using a simple list to store the data in memory 
 // Mock Databases
