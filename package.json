@@ -1,0 +1,23 @@
+{
+  "name": "rest-shop",
+  "version": "1.0.0",
+  "description": "a node.js RESTful API simple shop api",
+  "homepage": "https://github.com/Marouazzz/basic_api#readme",
+  "bugs": {
+    "url": "https://github.com/Marouazzz/basic_api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marouazzz/basic_api.git"
+  },
+  "license": "ISC",
+  "author": "maroua",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
